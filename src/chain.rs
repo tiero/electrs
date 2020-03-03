@@ -73,7 +73,7 @@ impl Network {
             "testnet".to_string(),
             "regtest".to_string(),
             "liquid".to_string(),
-            "liquidregtest".to_string(),
+            "elementsregtest".to_string(),
         ];
     }
 }
@@ -88,7 +88,7 @@ impl From<&str> for Network {
             #[cfg(feature = "liquid")]
             "liquid" => Network::Liquid,
             #[cfg(feature = "liquid")]
-            "liquidregtest" => Network::LiquidRegtest,
+            "elementsregtest" => Network::LiquidRegtest,
 
             _ => panic!("unsupported Bitcoin network: {:?}", network_name),
         }
